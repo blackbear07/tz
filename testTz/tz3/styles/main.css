@@ -1,0 +1,11 @@
+body {
+    margin: 0px;
+    background: fff;
+}
+
+textarea{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: red;
+}

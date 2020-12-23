@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">    
+    <title>Document</title>
+</head>
+<body>
+    <div id="show">
+
+    </div>
+    <textarea name="" id="textarea"">
+
+    </textarea>
+    <script>
+        let elemLeft, elemTop, maxElemLeft, maxElemTop, textarea;
+
+        textarea = document.getElementById('textarea');
+
+        maxElemLeft = document.documentElement.clientWidth - textarea.offsetWidth;
+        maxElemTop = document.documentElement.clientHeight - textarea.offsetHeight;
+
+        textarea.onmousemove = handler;
+
+        function handler() 
+        {
+            elemLeft = Math.random() * maxElemLeft;
+            textarea.style.left = elemLeft + 'px';
+            elemTop = Math.random() * maxElemTop;
+            textarea.style.top = elemTop + 'px';
+        }
+    </script>
+</body>
+</html>
